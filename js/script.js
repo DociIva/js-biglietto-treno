@@ -10,11 +10,27 @@ per indicare centesimi sul prezzo).
 Questo richiederà un minimo di ricerca.
 */
 
-// CHIEDI ALL'UTENTE I CHILOMETRI CHE VUOLE 
-var kmDaFare = prompt ('Quanti km vuoi percorrere?')
+// 1 CHIEDI ALL'UTENTE I CHILOMETRI CHE VUOLE 
+var kmDaFare = parseInt (prompt ('Quanti km vuoi percorrere?') );
 console.log(kmDaFare);
+var prezzoKm = 0.21;
 
-
-// CHIEDERE QUANTI ANNI HA 
-var età = prompt ('Quanti anni hai ?')
+// 2 CHIEDERE QUANTI ANNI HA 
+var età =  parseInt(prompt ('Quanti anni hai ?') );
 console.log (età);
+// 3 prezzo al km del biglietto
+var prezzo = kmDaFare * prezzoKm;
+
+// 4 
+var prezzo20 = (20 / 100) * prezzo;
+var prezzoMin = prezzo - prezzo20;
+
+// 5
+var prezzo40 = (40 / 100) * prezzo;
+var prezzoOv = prezzo - prezzo40;
+
+
+// se l'età è piu piccola di 18 deve avere un prezzo con il 20% di sconto
+// se l'età è sopra ai 18 ha il prezzo standard 
+// se l'età è sopra i 65 anni deve avere il 40% di sconto 
+
