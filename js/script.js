@@ -12,22 +12,39 @@ Questo richiederà un minimo di ricerca.
 
 // 1 CHIEDI ALL'UTENTE I CHILOMETRI CHE VUOLE 
 var kmDaFare = parseInt (prompt ('Quanti km vuoi percorrere?') );
-console.log(kmDaFare);
+//console.log(kmDaFare);
 var prezzoKm = 0.21;
 
 // 2 CHIEDERE QUANTI ANNI HA 
 var età =  parseInt(prompt ('Quanti anni hai ?') );
-console.log (età);
+//console.log (età);
 // 3 prezzo al km del biglietto
 var prezzo = kmDaFare * prezzoKm;
+//console.log (prezzo);
 
 // 4 
 var prezzo20 = (20 / 100) * prezzo;
 var prezzoMin = prezzo - prezzo20;
+//console.log (prezzoMin);
 
 // 5
 var prezzo40 = (40 / 100) * prezzo;
 var prezzoOv = prezzo - prezzo40;
+//console.log (prezzoOv);
+
+// 6
+if (età < 18 ) {
+    document.getElementById('costo-b') + prezzoMin + '$' ;
+   // console.log ('il prezzo scontato del 20% è ' + prezzoMin + '$');
+
+} else if (età >= 18 && età < 65) {
+    document.getElementById('costo-b') + prezzo + '$' ;
+   // console.log ('il prezzo intero è' + prezzo + '$');
+} else if (età >= 65) {
+    document.getElementById('costo-b') + prezzoOv + '$' ;
+    //console.log ('il prezzo scontato del 40% è ' + prezzoOv + '$');
+}
+
 
 
 // se l'età è piu piccola di 18 deve avere un prezzo con il 20% di sconto
