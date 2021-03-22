@@ -31,18 +31,20 @@ var prezzoMin = prezzo - prezzo20;
 var prezzo40 = (40 / 100) * prezzo;
 var prezzoOv = prezzo - prezzo40;
 //console.log (prezzoOv);
-
 // 6
 if (età < 18 ) {
-    document.getElementById('costo-b') + prezzoMin + '$' ;
-   // console.log ('il prezzo scontato del 20% è ' + prezzoMin + '$');
+    document.getElementById('biglietto').innerHTML = ('Il prezzo è ') + prezzoMin + ' $' ;
+    
+    console.log ('il prezzo scontato del 20% è ' + prezzoMin + '$');
 
 } else if (età >= 18 && età < 65) {
-    document.getElementById('costo-b') + prezzo + '$' ;
-   // console.log ('il prezzo intero è' + prezzo + '$');
+    document.getElementById('biglietto').innerHTML =  ('il prezzo è') + prezzo + ' $' ;
+    
+    console.log ('il prezzo intero è' + prezzo + ' $');
 } else if (età >= 65) {
-    document.getElementById('costo-b') + prezzoOv + '$' ;
-    //console.log ('il prezzo scontato del 40% è ' + prezzoOv + '$');
+    document.getElementById('biglietto').innerHTML = ('il prezzo è ') + prezzoOv + ' $' ;
+   
+    console.log ('il prezzo scontato del 40% è ' + prezzoOv + ' $');
 }
 
 
