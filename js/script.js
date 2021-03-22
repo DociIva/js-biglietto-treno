@@ -14,12 +14,12 @@ Questo richiederà un minimo di ricerca.
 var kmDaFare = parseInt (prompt ('Quanti km vuoi percorrere?') );
 //console.log(kmDaFare);
 var prezzoKm = 0.21;
-
 // 2 CHIEDERE QUANTI ANNI HA 
 var età =  parseInt(prompt ('Quanti anni hai ?') );
 //console.log (età);
 // 3 prezzo al km del biglietto
 var prezzo = kmDaFare * prezzoKm;
+
 //console.log (prezzo);
 
 // 4 
@@ -30,22 +30,25 @@ var prezzoMin = prezzo - prezzo20;
 // 5
 var prezzo40 = (40 / 100) * prezzo;
 var prezzoOv = prezzo - prezzo40;
+
 //console.log (prezzoOv);
 // 6
+
 if (età < 18 ) {
-    document.getElementById('biglietto').innerHTML = ('Il prezzo è ') + prezzoMin + ' $' ;
+    document.getElementById('box').innerHTML = ('Il prezzo se hai meno di 18 anni è ') + prezzoMin.toFixed(2) + ' $' ;
     
     console.log ('il prezzo scontato del 20% è ' + prezzoMin + '$');
 
 } else if (età >= 18 && età < 65) {
-    document.getElementById('biglietto').innerHTML =  ('il prezzo è') + prezzo + ' $' ;
+    document.getElementById('box').innerHTML =  ('il prezzo fisso è ') + prezzo.toFixed(2) + ' $' ;
     
     console.log ('il prezzo intero è' + prezzo + ' $');
 } else if (età >= 65) {
-    document.getElementById('biglietto').innerHTML = ('il prezzo è ') + prezzoOv + ' $' ;
+    document.getElementById('box').innerHTML = ('il prezzo se hai più di 65 è ') + prezzoOv.toFixed(2) + ' $' ;
    
     console.log ('il prezzo scontato del 40% è ' + prezzoOv + ' $');
 }
+
 
 
 
